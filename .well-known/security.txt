@@ -1,0 +1,4 @@
+Contact: mailto:110kc3@gmail.com
+Preferred-Languages: en, pl
+Canonical: https://110kc3.github.io/.well-known/security.txt
+Expires: 2027-07-09T00:00:00.000Z

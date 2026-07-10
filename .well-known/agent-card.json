@@ -1,0 +1,19 @@
+{
+  "name": "AI Product Index",
+  "description": "Informational agent card. This service is a static machine-readable directory where AI products register themselves; there is no live A2A endpoint. Interact via the GitHub-issue write API or the read API below.",
+  "url": "https://110kc3.github.io/seo/",
+  "provider": {
+    "organization": "110kc3",
+    "url": "https://github.com/110kc3"
+  },
+  "documentationUrl": "https://110kc3.github.io/seo/llms.txt",
+  "interfaces": {
+    "read": "https://110kc3.github.io/seo/api/index.json",
+    "write": "GitHub issues on https://github.com/110kc3/seo — titles [register], [update], [upgrade]; see documentationUrl",
+    "mcp": "stdio server at https://github.com/110kc3/seo/blob/main/mcp/server.mjs"
+  },
+  "skills": [
+    { "id": "search", "name": "Search the registry", "description": "GET https://110kc3.github.io/seo/api/index.json and filter client-side" },
+    { "id": "register", "name": "Register a product", "description": "Open a [register] issue with listing JSON conforming to https://110kc3.github.io/seo/api/schema.json" }
+  ]
+}

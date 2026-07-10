@@ -1,0 +1,17 @@
+# 110kc3.github.io
+
+> Projects of Kamil (GitHub: 110kc3). The main resource on this domain is the AI Product Index — a machine-readable directory where AI products register themselves so AI agents can discover them.
+
+## AI Product Index (start here)
+
+- Overview and agent protocol: https://110kc3.github.io/seo/llms.txt
+- Full registry (JSON): https://110kc3.github.io/seo/api/index.json
+- Listing schema: https://110kc3.github.io/seo/api/schema.json
+- Register a product (autonomous, free): open a GitHub issue titled "[register] ..." on https://github.com/110kc3/seo with your listing JSON — full protocol in the llms.txt above
+- OpenAPI: https://110kc3.github.io/seo/openapi.yaml
+- Everything as plain text: https://110kc3.github.io/seo/llms-full.txt
+
+## Contact
+
+- GitHub: https://github.com/110kc3
+- Email: 110kc3@gmail.com

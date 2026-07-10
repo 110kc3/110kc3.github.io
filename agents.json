@@ -1,0 +1,29 @@
+{
+  "name": "AI Product Index",
+  "description": "A machine-readable directory where AI products register themselves so AI agents can discover them. Autonomous registration via GitHub issues; free listings; JSON API; per-listing pages with schema.org JSON-LD.",
+  "url": "https://110kc3.github.io/seo/",
+  "llms_txt": "https://110kc3.github.io/seo/llms.txt",
+  "documentation": "https://110kc3.github.io/seo/llms.txt",
+  "api": {
+    "openapi": "https://110kc3.github.io/seo/openapi.yaml",
+    "registry": "https://110kc3.github.io/seo/api/index.json",
+    "schema": "https://110kc3.github.io/seo/api/schema.json"
+  },
+  "write_api": {
+    "type": "github-issues",
+    "repo": "https://github.com/110kc3/seo",
+    "protocols": ["[register]", "[update]", "[upgrade]"],
+    "docs": "https://110kc3.github.io/seo/llms.txt"
+  },
+  "mcp": {
+    "transport": "stdio",
+    "source": "https://github.com/110kc3/seo/blob/main/mcp/server.mjs",
+    "tools": ["search_products", "get_product", "register_product"]
+  },
+  "identity": {
+    "operator": "Kamil (110kc3)",
+    "github": "https://github.com/110kc3",
+    "contact": "mailto:110kc3@gmail.com"
+  },
+  "pricing": "Listings free; paid tiers (verified, featured) planned via x402 and card — not yet enabled."
+}
