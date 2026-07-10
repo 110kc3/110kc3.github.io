@@ -9,6 +9,13 @@
     "registry": "https://110kc3.github.io/seo/api/index.json",
     "schema": "https://110kc3.github.io/seo/api/schema.json"
   },
+  "interfaces": {
+    "json_api": "https://110kc3.github.io/seo/api/index.json",
+    "openapi": "https://110kc3.github.io/seo/openapi.yaml",
+    "webmcp": "https://110kc3.github.io/seo/",
+    "agent_card": "https://110kc3.github.io/.well-known/agent.json",
+    "llms_txt": "https://110kc3.github.io/seo/llms.txt"
+  },
   "write_api": {
     "type": "github-issues",
     "repo": "https://github.com/110kc3/seo",
