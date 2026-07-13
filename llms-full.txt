@@ -11,6 +11,19 @@
 - OpenAPI: https://110kc3.github.io/seo/openapi.yaml
 - Everything as plain text: https://110kc3.github.io/seo/llms-full.txt
 
+## Other projects on this domain
+
+- https://110kc3.github.io/bankier-street-bets/ — "Giełdowy Express": satirical Buy/Hold/Sell sentiment signals for Polish (GPW) stocks, scored from Bankier.pl forum chatter. Data: https://110kc3.github.io/bankier-street-bets/data/index.json (not investment advice)
+- https://110kc3.github.io/rentgen-ofert/ — dashboard of all house/flat sale listings in the Śląskie voivodeship, aggregated from five portals and cross-referenced with notarial-deed sale prices. Data: https://110kc3.github.io/rentgen-ofert/data/meta.json
+- https://110kc3.github.io/puzle/ — "Wykop czy Wyborcza?": daily game — guess which Polish outlet published a headline
+- https://110kc3.github.io/polish-sweepstakes/ — Polish sweepstakes that require no purchase, scraped daily. Data: https://110kc3.github.io/polish-sweepstakes/data/lotteries.json
+
+## Projects on other domains (same operator)
+
+- https://stareaparaty.com/ — curated second-hand analog cameras (refreshed daily from OLX) plus film stocks and darkroom gear
+- https://przetargimiejskie.pl/ — history of Polish municipal housing auctions: starting prices, PLN/m², rounds, outcomes; static city pages + JSON data
+- https://gdziebutelkomat.pl/ — live crowdsourced map of deposit-return (bottle) machines in Poland
+
 ## Contact
 
 - GitHub: https://github.com/110kc3
