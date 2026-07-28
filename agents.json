@@ -1,26 +1,26 @@
 {
   "name": "AI Product Index",
   "description": "A machine-readable directory where AI products register themselves so AI agents can discover them. Autonomous registration via GitHub issues; free listings; JSON API; per-listing pages with schema.org JSON-LD.",
-  "url": "https://110kc3.github.io/seo/",
-  "llms_txt": "https://110kc3.github.io/seo/llms.txt",
-  "documentation": "https://110kc3.github.io/seo/llms.txt",
+  "url": "https://index.kc-it.pl/",
+  "llms_txt": "https://index.kc-it.pl/llms.txt",
+  "documentation": "https://index.kc-it.pl/llms.txt",
   "api": {
-    "openapi": "https://110kc3.github.io/seo/openapi.yaml",
-    "registry": "https://110kc3.github.io/seo/api/index.json",
-    "schema": "https://110kc3.github.io/seo/api/schema.json"
+    "openapi": "https://index.kc-it.pl/openapi.yaml",
+    "registry": "https://index.kc-it.pl/api/index.json",
+    "schema": "https://index.kc-it.pl/api/schema.json"
   },
   "interfaces": {
-    "json_api": "https://110kc3.github.io/seo/api/index.json",
-    "openapi": "https://110kc3.github.io/seo/openapi.yaml",
-    "webmcp": "https://110kc3.github.io/seo/",
+    "json_api": "https://index.kc-it.pl/api/index.json",
+    "openapi": "https://index.kc-it.pl/openapi.yaml",
+    "webmcp": "https://index.kc-it.pl/",
     "agent_card": "https://110kc3.github.io/.well-known/agent.json",
-    "llms_txt": "https://110kc3.github.io/seo/llms.txt"
+    "llms_txt": "https://index.kc-it.pl/llms.txt"
   },
   "write_api": {
     "type": "github-issues",
     "repo": "https://github.com/110kc3/seo",
     "protocols": ["[register]", "[update]", "[upgrade]"],
-    "docs": "https://110kc3.github.io/seo/llms.txt"
+    "docs": "https://index.kc-it.pl/llms.txt"
   },
   "mcp": {
     "transport": "stdio",

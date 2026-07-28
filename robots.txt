@@ -44,4 +44,3 @@ User-agent: meta-externalagent
 Allow: /
 
 Sitemap: https://110kc3.github.io/sitemap.xml
-Sitemap: https://110kc3.github.io/seo/sitemap.xml

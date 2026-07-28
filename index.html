@@ -7,6 +7,56 @@
 <meta name="description" content="Projects of Kamil (110kc3). Main resource: the AI Product Index, a machine-readable directory where AI products register themselves.">
 <link rel="canonical" href="https://110kc3.github.io/">
 <link rel="alternate" type="text/markdown" href="llms.txt" title="llms.txt (agent-readable index)">
+<link rel="alternate" type="application/json" href="agents.json" title="agents.json (machine-readable project index)">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="110kc3">
+<meta property="og:title" content="110kc3 — projects">
+<meta property="og:description" content="Projects of Kamil (110kc3). Main resource: the AI Product Index, a machine-readable directory where AI products register themselves.">
+<meta property="og:url" content="https://110kc3.github.io/">
+<meta property="og:image" content="https://110kc3.github.io/og-image.svg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://110kc3.github.io/#website",
+      "url": "https://110kc3.github.io/",
+      "name": "110kc3 — projects",
+      "description": "Projects of Kamil (110kc3). Main resource: the AI Product Index, a machine-readable directory where AI products register themselves.",
+      "inLanguage": "en",
+      "publisher": { "@id": "https://110kc3.github.io/#person" }
+    },
+    {
+      "@type": "Person",
+      "@id": "https://110kc3.github.io/#person",
+      "name": "Kamil",
+      "alternateName": "110kc3",
+      "url": "https://110kc3.github.io/",
+      "sameAs": ["https://github.com/110kc3", "https://kc-it.pl"]
+    },
+    {
+      "@type": "ItemList",
+      "name": "Projects",
+      "itemListOrder": "https://schema.org/ItemListUnordered",
+      "numberOfItems": 8,
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "item": { "@type": "WebApplication", "name": "AI Product Index", "url": "https://index.kc-it.pl/", "applicationCategory": "DeveloperApplication", "description": "A machine-readable directory where AI products register themselves so AI agents can discover them." } },
+        { "@type": "ListItem", "position": 2, "item": { "@type": "WebApplication", "name": "Giełdowy Express", "url": "https://110kc3.github.io/bankier-street-bets/", "applicationCategory": "FinanceApplication", "description": "Satirical Buy/Hold/Sell sentiment signals for Polish (GPW) stocks, scored from Bankier.pl forum chatter. Not investment advice." } },
+        { "@type": "ListItem", "position": 3, "item": { "@type": "WebApplication", "name": "Rentgen Ofert", "url": "https://110kc3.github.io/rentgen-ofert/", "applicationCategory": "BusinessApplication", "description": "Dashboard of house and flat sale listings in the Śląskie voivodeship, aggregated from five portals and cross-referenced with notarial-deed sale prices." } },
+        { "@type": "ListItem", "position": 4, "item": { "@type": "Game", "name": "Wykop czy Wyborcza?", "url": "https://110kc3.github.io/puzle/", "description": "Daily game: guess which Polish outlet published a headline." } },
+        { "@type": "ListItem", "position": 5, "item": { "@type": "WebApplication", "name": "Polish Sweepstakes", "url": "https://110kc3.github.io/polish-sweepstakes/", "applicationCategory": "BusinessApplication", "description": "Polish sweepstakes that require no purchase, scraped daily." } },
+        { "@type": "ListItem", "position": 6, "item": { "@type": "WebSite", "name": "Stare Aparaty", "url": "https://stareaparaty.com/", "description": "Curated second-hand analog cameras refreshed daily from OLX, plus film stocks and darkroom gear." } },
+        { "@type": "ListItem", "position": 7, "item": { "@type": "WebSite", "name": "Przetargi Miejskie", "url": "https://przetargimiejskie.pl/", "description": "History of Polish municipal housing auctions: starting prices, PLN/m², rounds and outcomes." } },
+        { "@type": "ListItem", "position": 8, "item": { "@type": "WebSite", "name": "Gdzie Butelkomat", "url": "https://gdziebutelkomat.pl/", "description": "Live crowdsourced map of deposit-return (bottle) machines in Poland." } }
+      ]
+    }
+  ]
+}
+</script>
 <style>
   :root { --bg:#fff; --fg:#1a1a1a; --muted:#666; --accent:#0b6e4f; }
   @media (prefers-color-scheme: dark) { :root { --bg:#111; --fg:#e8e8e6; --muted:#999; --accent:#4dc79a; } }
@@ -17,7 +67,7 @@
 </head>
 <body>
 <h1>110kc3</h1>
-<p><strong><a href="seo/">AI Product Index</a></strong> — a machine-readable directory where AI products register themselves so AI agents can discover them. Agents: start at <a href="llms.txt">llms.txt</a>.</p>
+<p><strong><a href="https://index.kc-it.pl/">AI Product Index</a></strong> — a machine-readable directory where AI products register themselves so AI agents can discover them. Agents: start at <a href="llms.txt">llms.txt</a>.</p>
 <p>Other projects: <a href="bankier-street-bets/">Giełdowy Express</a> ·
 <a href="rentgen-ofert/">Rentgen Ofert</a> ·
 <a href="puzle/">Wykop czy Wyborcza?</a> ·
