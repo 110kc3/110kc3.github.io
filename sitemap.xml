@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Only sitemaps on this host. index.kc-it.pl is a separate origin that serves
+<!-- Only sitemaps on this host. index.percall.dev is a separate origin that serves
      its own robots.txt and sitemap, so it is discovered on its own; a
      cross-host <loc> here is out of scope for this index and ignored. -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

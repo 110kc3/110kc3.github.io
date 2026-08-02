@@ -1,36 +1,56 @@
 {
   "name": "AI Product Index",
-  "description": "A machine-readable directory where AI products register themselves so AI agents can discover them. Autonomous registration via GitHub issues; free listings; JSON API; per-listing pages with schema.org JSON-LD.",
-  "url": "https://index.kc-it.pl/",
-  "llms_txt": "https://index.kc-it.pl/llms.txt",
-  "documentation": "https://index.kc-it.pl/llms.txt",
+  "description": "A machine-readable directory where AI products register themselves so AI agents can discover them, plus an agent-readability grader for any URL. Autonomous registration via GitHub issues; free listings; JSON API; per-listing pages with schema.org JSON-LD.",
+  "url": "https://index.percall.dev/",
+  "llms_txt": "https://index.percall.dev/llms.txt",
+  "documentation": "https://index.percall.dev/llms.txt",
+  "umbrella": "https://percall.dev/",
   "api": {
-    "openapi": "https://index.kc-it.pl/openapi.yaml",
-    "registry": "https://index.kc-it.pl/api/index.json",
-    "schema": "https://index.kc-it.pl/api/schema.json"
+    "openapi": "https://index.percall.dev/openapi.yaml",
+    "registry": "https://index.percall.dev/api/index.json",
+    "schema": "https://index.percall.dev/api/schema.json",
+    "search": "https://index.percall.dev/api/search",
+    "ask": "https://index.percall.dev/ask",
+    "score_free": "https://index.percall.dev/api/score",
+    "audit_paid": "https://index.percall.dev/api/audit",
+    "payment_terms": "https://index.percall.dev/api/x402/info"
   },
   "interfaces": {
-    "json_api": "https://index.kc-it.pl/api/index.json",
-    "openapi": "https://index.kc-it.pl/openapi.yaml",
-    "webmcp": "https://index.kc-it.pl/",
-    "agent_card": "https://110kc3.github.io/.well-known/agent.json",
-    "llms_txt": "https://index.kc-it.pl/llms.txt"
+    "json_api": "https://index.percall.dev/api/index.json",
+    "openapi": "https://index.percall.dev/openapi.yaml",
+    "webmcp": "https://index.percall.dev/",
+    "mcp": "https://index.percall.dev/mcp",
+    "agent_card": "https://110kc3.github.io/.well-known/agent-card.json",
+    "llms_txt": "https://index.percall.dev/llms.txt"
   },
   "write_api": {
     "type": "github-issues",
     "repo": "https://github.com/110kc3/seo",
     "protocols": ["[register]", "[update]", "[upgrade]"],
-    "docs": "https://index.kc-it.pl/llms.txt"
+    "docs": "https://index.percall.dev/llms.txt"
   },
   "mcp": {
-    "transport": "stdio",
-    "source": "https://github.com/110kc3/seo/blob/main/mcp/server.mjs",
-    "tools": ["search_products", "get_product", "register_product"]
+    "transport": "streamable-http",
+    "url": "https://index.percall.dev/mcp",
+    "auth": "none",
+    "install": "claude mcp add --transport http ai-product-index https://index.percall.dev/mcp",
+    "tools": [
+      "search_products",
+      "get_product",
+      "score_url",
+      "search_x402_endpoints",
+      "search_mcp_servers",
+      "how_to_register"
+    ],
+    "stdio_variant": {
+      "source": "https://github.com/110kc3/seo/blob/main/mcp/server.mjs",
+      "note": "The same tools plus register_product, which needs a GITHUB_TOKEN a public endpoint must not hold."
+    }
   },
   "identity": {
     "operator": "Kamil (110kc3)",
     "github": "https://github.com/110kc3",
     "contact": "mailto:110kc3@gmail.com"
   },
-  "pricing": "Listings free; paid tiers (verified, featured) planned via x402 and card — not yet enabled."
+  "pricing": "Listings are free and stay free. The agent-readability audit at POST /api/audit costs $0.05 in USDC on Base, settled over HTTP 402 (x402) with no account; the A-F grade at GET /api/score is free. Paid listing tiers (verified, featured) settle on the same rail."
 }

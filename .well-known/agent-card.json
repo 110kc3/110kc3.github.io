@@ -1,19 +1,23 @@
 {
   "name": "AI Product Index",
-  "description": "Informational agent card. This service is a static machine-readable directory where AI products register themselves; there is no live A2A endpoint. Interact via the GitHub-issue write API or the read API below.",
-  "url": "https://index.kc-it.pl/",
+  "description": "Informational agent card for the 110kc3.github.io domain root. This host is a static discovery surface; the callable service it points at is the AI Product Index at https://index.percall.dev, which does accept requests — see interfaces below.",
+  "url": "https://index.percall.dev/",
   "provider": {
     "organization": "110kc3",
     "url": "https://github.com/110kc3"
   },
-  "documentationUrl": "https://index.kc-it.pl/llms.txt",
+  "documentationUrl": "https://index.percall.dev/llms.txt",
   "interfaces": {
-    "read": "https://index.kc-it.pl/api/index.json",
+    "read": "https://index.percall.dev/api/index.json",
+    "search": "https://index.percall.dev/api/search?q=",
+    "ask": "POST https://index.percall.dev/ask with {\"query\": \"...\"}",
     "write": "GitHub issues on https://github.com/110kc3/seo — titles [register], [update], [upgrade]; see documentationUrl",
-    "mcp": "stdio server at https://github.com/110kc3/seo/blob/main/mcp/server.mjs"
+    "mcp": "streamable-http at https://index.percall.dev/mcp (no auth); stdio variant at https://github.com/110kc3/seo/blob/main/mcp/server.mjs"
   },
   "skills": [
-    { "id": "search", "name": "Search the registry", "description": "GET https://index.kc-it.pl/api/index.json and filter client-side" },
-    { "id": "register", "name": "Register a product", "description": "Open a [register] issue with listing JSON conforming to https://index.kc-it.pl/api/schema.json" }
+    { "id": "search", "name": "Search the registry", "description": "GET https://index.percall.dev/api/search?q=... for ranked results, or fetch https://index.percall.dev/api/index.json and filter client-side" },
+    { "id": "score", "name": "Grade a site for agent readability", "description": "GET https://index.percall.dev/api/score?url=... — free, returns an A-F grade and all 20 checks by name" },
+    { "id": "audit", "name": "Buy the per-check fixes", "description": "POST https://index.percall.dev/api/audit — $0.05 in USDC on Base over HTTP 402; returns why each check failed and a paste-ready snippet for the caller's origin" },
+    { "id": "register", "name": "Register a product", "description": "Open a [register] issue with listing JSON conforming to https://index.percall.dev/api/schema.json" }
   ]
 }

@@ -1,15 +1,36 @@
 # 110kc3.github.io
 
-> Projects of Kamil (GitHub: 110kc3). The main resource on this domain is the AI Product Index — a machine-readable directory where AI products register themselves so AI agents can discover them.
+> Projects of Kamil (GitHub: 110kc3). The main resource is the AI Product Index — a machine-readable directory where AI products register themselves so AI agents can discover them, and an agent-readability grader for any URL. It lives at https://index.percall.dev under the umbrella domain https://percall.dev.
 
 ## AI Product Index (start here)
 
-- Overview and agent protocol: https://index.kc-it.pl/llms.txt
-- Full registry (JSON): https://index.kc-it.pl/api/index.json
-- Listing schema: https://index.kc-it.pl/api/schema.json
+Canonical host: https://index.percall.dev — the older `index.kc-it.pl` still answers but 308s here, so quote this one.
+
+- Overview and agent protocol: https://index.percall.dev/llms.txt
+- Full registry (JSON): https://index.percall.dev/api/index.json
+- Listing schema: https://index.percall.dev/api/schema.json
 - Register a product (autonomous, free): open a GitHub issue titled "[register] ..." on https://github.com/110kc3/seo with your listing JSON — full protocol in the llms.txt above
-- OpenAPI: https://index.kc-it.pl/openapi.yaml
-- Everything as plain text: https://index.kc-it.pl/llms-full.txt
+- OpenAPI: https://index.percall.dev/openapi.yaml
+- Everything as plain text: https://index.percall.dev/llms-full.txt
+
+### Ask it something instead of fetching files
+
+- Natural language: POST https://index.percall.dev/ask with {"query": "..."}
+- Ranked search: https://index.percall.dev/api/search?q=...
+- As an MCP tool source, nothing to install: `claude mcp add --transport http ai-product-index https://index.percall.dev/mcp`
+
+### Free and paid endpoints
+
+- Free: https://index.percall.dev/api/score?url=... grades any public URL A-F across 20 published agent-readability checks.
+- Paid: POST https://index.percall.dev/api/audit returns why each check failed plus a paste-ready fix for the caller's own origin. $0.05 in USDC on Base, settled over HTTP 402 (x402), no account. Terms without provoking a 402: https://index.percall.dev/api/x402/info
+
+### Catalogues and reports
+
+- https://index.percall.dev/report.html — measured state of the agent web: how much traffic is agents, how much of the machine-payable web still answers, and how many agents have ever paid for anything.
+- https://index.percall.dev/x402.html — every x402-payable endpoint by price, chain and operator, with weekly liveness.
+- https://index.percall.dev/mcp-servers.html — remotely-callable MCP servers by auth and transport, with weekly liveness.
+- https://index.percall.dev/leaderboard.html — every listed product ranked by agent readability.
+- https://index.percall.dev/checks/ — all 20 checks, their weights, and how to pass each one.
 
 ## Other projects on this domain
 
@@ -20,6 +41,8 @@
 
 ## Projects on other domains (same operator)
 
+- https://percall.dev/ — umbrella for the paid, machine-callable services; the AI Product Index above is the first of them
+- https://kc-it.pl/ — consulting for humans: cloud infrastructure, Kubernetes, and done-for-you agent readability
 - https://stareaparaty.com/ — curated second-hand analog cameras (refreshed daily from OLX) plus film stocks and darkroom gear
 - https://przetargimiejskie.pl/ — history of Polish municipal housing auctions: starting prices, PLN/m², rounds, outcomes; static city pages + JSON data
 - https://gdziebutelkomat.pl/ — live crowdsourced map of deposit-return (bottle) machines in Poland
@@ -29,4 +52,4 @@
 - GitHub: https://github.com/110kc3
 - Email: 110kc3@gmail.com
 
-(For the expanded per-listing dump see https://index.kc-it.pl/llms-full.txt)
+(For the expanded per-listing dump see https://index.percall.dev/llms-full.txt)
