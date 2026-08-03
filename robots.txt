@@ -1,6 +1,16 @@
 # All crawlers welcome, AI crawlers explicitly invited.
 # Agents: start at https://110kc3.github.io/llms.txt
 
+# Content signals — https://contentsignals.org/
+# The usual default is `ai-train=no`, written for a publisher protecting an
+# archive. These are public project sites whose purpose is to be found and read,
+# so being in training data is distribution rather than leakage. All three are
+# yes, decided deliberately rather than copied.
+#
+# This file is the root of the domain every 110kc3.github.io project is served
+# from, so one line here applies to all of them at once.
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+
 User-agent: *
 Allow: /
 
