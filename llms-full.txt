@@ -23,8 +23,8 @@ Canonical host: https://index.percall.dev — the older `index.kc-it.pl` still a
 
 - Free: https://index.percall.dev/api/score?url=... grades any public URL A-F across 20 published agent-readability checks.
 - Paid: POST https://index.percall.dev/api/audit returns why each check failed plus a paste-ready fix for the caller's own origin. $0.05 in USDC on Base, settled over HTTP 402 (x402), no account. Terms without provoking a 402: https://index.percall.dev/api/x402/info
-- Paid: GET https://index.percall.dev/api/liveness?url=... probes one machine-payable endpoint right now — whether it answers, how fast, and the payment terms it currently quotes, read from its own 402. $0.005.
-- Paid: POST https://index.percall.dev/api/route with {"q": "unit conversion", "max_price": 0.01} ranks candidate endpoints for a task, each probed live, each with the URL to call. $0.005; a query matching nothing is free.
+- Paid: GET https://router.percall.dev/api/liveness?url=... probes one machine-payable endpoint right now — whether it answers, how fast, and the payment terms it currently quotes, read from its own 402. $0.005.
+- Paid: POST https://router.percall.dev/api/route with {"q": "unit conversion", "max_price": 0.01} ranks candidate endpoints for a task, each probed live, each with the URL to call. $0.005; a query matching nothing is free.
 - Both of the above never pay and never proxy: they hand you the URL and the terms, and you pay the endpoint directly from your own wallet. Every answer also carries that endpoint's history — probes, answered, consecutive failures, and how many of the last 30 observations answered.
 
 ### Catalogues and reports

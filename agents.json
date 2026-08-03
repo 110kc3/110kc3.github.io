@@ -13,8 +13,8 @@
     "ask": "https://index.percall.dev/ask",
     "score_free": "https://index.percall.dev/api/score",
     "audit_paid": "https://index.percall.dev/api/audit",
-    "liveness_paid": "https://index.percall.dev/api/liveness",
-    "route_paid": "https://index.percall.dev/api/route",
+    "liveness_paid": "https://router.percall.dev/api/liveness",
+    "route_paid": "https://router.percall.dev/api/route",
     "payment_terms": "https://index.percall.dev/api/x402/info"
   },
   "interfaces": {
