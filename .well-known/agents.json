@@ -13,6 +13,8 @@
     "ask": "https://index.percall.dev/ask",
     "score_free": "https://index.percall.dev/api/score",
     "audit_paid": "https://index.percall.dev/api/audit",
+    "liveness_paid": "https://index.percall.dev/api/liveness",
+    "route_paid": "https://index.percall.dev/api/route",
     "payment_terms": "https://index.percall.dev/api/x402/info"
   },
   "interfaces": {
@@ -52,5 +54,5 @@
     "github": "https://github.com/110kc3",
     "contact": "mailto:110kc3@gmail.com"
   },
-  "pricing": "Listings are free and stay free. The agent-readability audit at POST /api/audit costs $0.05 in USDC on Base, settled over HTTP 402 (x402) with no account; the A-F grade at GET /api/score is free. Paid listing tiers (verified, featured) settle on the same rail."
+  "pricing": "Listings are free and stay free. The agent-readability audit at POST /api/audit costs $0.05 in USDC on Base, settled over HTTP 402 (x402) with no account; the A-F grade at GET /api/score is free. Paid listing tiers (verified, featured) settle on the same rail. The Router's two endpoints, GET /api/liveness and POST /api/route, are $0.005 each on the same rail: they probe machine-payable endpoints and rank candidates without ever paying, so the caller pays the endpoint it chooses directly."
 }
